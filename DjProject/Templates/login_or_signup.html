@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {% block content %}
+    <title> The Traveller Girl</title>
+    <h3> Welcome To Navita's Traveller Company :) </h3>
+    <h2> The Traveller Girl <sub> Tours And Travels</sub></h2>
+    <style>body{background-image:url(' https://th.bing.com/th/id/OIP.ZiLxWLO-MoRgnPSfYaMrbAHaNK?w=115&h=180&c=7&r=0&o=5&dpr=1.1&pid=1.7');background-size:cover;}</style>
+    <form action = "registration" method = "post">
+    <br>First Name:<input type="text" name= "name"/></br>
+    {% comment %} <br>Last Name:<input type="text" name= "Lastname:"/></br> {% endcomment %}
+    <br>Gmail ID:<input type="text" name= "email"/></br>
+        {% csrf_token %} 
+    {% comment %} Date of Tour:<input type = "Date"><br>
+    {% comment %} <button type = "submit"name= "Button1">submit</button> {% endcomment %}
+    {% comment %} <label>Choose your favorite city in india</label>
+    <select>
+        <option>Banglore</option>
+        <option>Ajmer</option>
+        <option>Mumbai</option>
+        <option>Jaipur</option>
+        <option>Delhi</option>
+        <option>Jaisalmer</option>
+        <option>Udaipur</option>
+        <option>Ahemdabad</option>
+        <option>Agra</option>
+        <option>Varanashi</option>
+        <option>Jodhpur</option>
+        <option>Kochi</option>
+        <option>Kolkata</option>
+        <option>Chenaai</option>
+        <option>Munnar</option>
+        <option>Anjuna</option>
+    </select><br>
+    {% comment %} <button type = "reset" value = "submit"> Reset</button><br>
+    <button type = "submit"name= "Button1">submit</button><br> {% endcomment %}
+        {% comment %} Enter Your Address:<br>
+        <textarea rows="2"cols="20"></textarea><br>   {% endcomment %}
+        contact:
+        <input type = "text" name = "contact" placeholder =  "countrycode" value = +91 size = "10" /><br>
+        <br>
+        <input type = "submit" value = "submit"><br>
+    </form>
+    {% endblock %} 
+</head>
+<body>
